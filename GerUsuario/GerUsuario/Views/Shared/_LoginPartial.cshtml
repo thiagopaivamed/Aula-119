@@ -1,0 +1,18 @@
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<Usuario> SignInManager
+@inject UserManager<Usuario> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <form asp-action="LogOut" asp-controller="Home" class="navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a>Hello @UserManager.GetUserName(User)!</a>
+            </li>
+            <li>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link">Logout</button>
+            </li>
+        </ul>
+    </form>
+}

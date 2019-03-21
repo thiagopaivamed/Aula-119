@@ -1,0 +1,41 @@
+﻿@model GerUsuario.Models.RegistroViewModel
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<h2>Registro</h2>
+
+<form asp-action="Registro" asp-controller="Home">
+    <div>
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" />
+    </div>
+
+    <div>
+        <label asp-for="SobreNome"></label>
+        <input asp-for="SobreNome" />
+    </div>
+
+    <div>
+        <label asp-for="NomeUsuario"></label>
+        <input asp-for="NomeUsuario" />
+    </div>
+
+    <div>
+        <label asp-for="Idade"></label>
+        <input asp-for="Idade" />
+    </div>
+
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div>
+
+    <div>
+        <label asp-for="Senha"></label>
+        <input asp-for="Senha" />
+    </div>
+
+    <input type="submit" value="Registrar" />
+</form>
+

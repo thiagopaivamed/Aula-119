@@ -1,0 +1,21 @@
+﻿@model GerUsuario.Models.NivelAcesso
+@{
+    ViewData["Title"] = "NovoNivelAcesso";
+}
+
+<h2>NovoNivelAcesso</h2>
+
+
+<form asp-action="NovoNivelAcesso" asp-controller="Home">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label asp-for="Descricao"></label>
+        <input asp-for="Descricao" />
+    </div>   
+
+    <input type="submit" value="Salvar" />
+</form>
